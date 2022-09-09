@@ -7,11 +7,7 @@ class addition
         Scanner sc=new Scanner(System.in);
         a=sc.nextInt();
         b=sc.nextInt();
-        
         sum=a+b;
-         
         System.out.print(sum);
-        
     }
-    
 }
