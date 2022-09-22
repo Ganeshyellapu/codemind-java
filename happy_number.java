@@ -3,7 +3,7 @@ class Happy
 {
     public static boolean ishappy(int n)
     {
-        int r,sum=0,temp;
+        int r,temp,sum=0;
         temp=n;
         while(temp>0)
         {
@@ -22,20 +22,20 @@ class Happy
                 return false;
             }
         }
-    return ishappy(sum);
+        return(ishappy(sum));
     }
     public static void main(String args[])
     {
+        int n;
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
+        n=sc.nextInt();
         if(ishappy(n))
         {
-          System.out.print("True");  
+            System.out.print("True");
         }
         else
         {
             System.out.print("False");
         }
-        
     }
 }
