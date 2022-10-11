@@ -1,24 +1,26 @@
 import java.util.*;
-class Minimum
+class Array
 {
     public static void main(String args[])
     {
-        int n,min;
         Scanner sc=new Scanner(System.in);
+        int n,i,s,avg,c=0;
         n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+        int [] a=new int[n];
+        for(i=0;i<n;i++)
         {
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
         }
-        min=arr[0];
-        for(int i=0;i<n;i++)
+        s=a[0];
+        for(i=0;i<n;i++)
         {
-            if(arr[i]<min)
+            if(s>a[i])
             {
-                min=arr[i];
+                s=a[i];
             }
         }
-        System.out.print(min);
+        System.out.print(s);
+        
+        
     }
 }
