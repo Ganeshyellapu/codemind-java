@@ -1,22 +1,21 @@
 import java.util.*;
-class Average
+class Array
 {
     public static void main(String args[])
     {
-        int n;
-        double avg,sum=0;
         Scanner sc=new Scanner(System.in);
+        int n,i,c=0;
+        double avg,s=0.0;
         n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+        int [] a=new int[n];
+        for(i=0;i<n;i++)
         {
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
+            s=s+a[i];
         }
-        for(int i=0;i<n;i++)
-        {
-            sum=sum+arr[i];
-        }
-        avg=sum/n;
-        System.out.format("%.2f",avg);
+        avg=s/n;
+        System.out.printf("%.2f",avg);
+        
+        
     }
 }
