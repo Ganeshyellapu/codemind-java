@@ -1,23 +1,32 @@
 import java.util.*;
-class Last_odd
+class Last
 {
     public static void main(String args[])
     {
-        int n;
         Scanner sc=new Scanner(System.in);
+        int n,i,j=0,k=0;
         n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+        int [] a=new int[n];
+        int [] b=new int[100];
+        for(i=0;i<n;i++)
         {
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
         }
-        for(int i=n-1;i>=0;i--)
+        for(i=0;i<n;i++)
         {
-            if(arr[i]%2==0)
+            if(a[i]%2==0)
             {
-                System.out.print(i);
-                break;
+                b[j]=i;
+                j+=1;
             }
         }
+        for(i=0;i<j;i++)
+        {
+            if(k<b[i])
+            {
+                k=b[i];
+            }
+        }
+        System.out.print(k);
     }
 }
