@@ -1,32 +1,31 @@
 import java.util.*;
-class Search
+class Last
 {
-  public static void main(String args[])
-  {
-      int n,a;
-      Scanner sc=new Scanner(System.in);
-      n=sc.nextInt();
-      int[] arr=new int[n];
-      for(int i=0;i<n;i++)
-      {
-          arr[i]=sc.nextInt();
-      }
-      a=sc.nextInt();
-      int c=0;
-      for(int i=0;i<n;i++)
-      {
-          if(a==arr[i])
-          {
-              c+=1;
-          }
-      }
-      if(c>=1)
-      {
-          System.out.print("True");
-      }
-      else
-      {
-          System.out.print("False");
-      }
-  }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,b,c=0;
+        n=sc.nextInt();
+        int [] a=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(a[i]==b)
+            {
+                c=c+1;
+            }
+        }
+        if(c>0)
+        {
+            System.out.print("True");
+        }
+        else
+        {
+            System.out.print("False");
+        }
+    }
 }
