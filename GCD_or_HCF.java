@@ -1,15 +1,16 @@
 import java.util.*;
-class Hcf
+class Gcd
 {
     public static void main(String args[])
     {
-        int n,m;
+        int a,b,c,i;
         Scanner sc=new Scanner(System.in);
-        n=sc.nextInt();
-        m=sc.nextInt();
-        for(int i=m;i>=1;i--)
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=a>b?a:b;
+        for(i=c;i>0;i--)
         {
-            if(n%i==0 && m%i==0)
+            if(a%i==0 && b%i==0)
             {
                 System.out.print(i);
                 break;
