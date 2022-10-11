@@ -1,44 +1,52 @@
 import java.util.*;
 class Circular
 {
-    public static boolean isprime(int n)
+    static boolean isprime(int k)
     {
-        if(n<=1)
+        int i,c=0;
+        for(i=2;i<=(int)Math.sqrt(k);i++)
+        {
+            if(k%i==0)
+            {
+                c=c+1;
+            }
+        }
+        if(c>0)
         {
             return false;
         }
         else
         {
-          for(int i=2;i<Math.sqrt(n);i++)
-            {
-                if(n%i==0)
-                {
-                    return false;
-                }
-            }
+            return true;
         }
-        return true; 
+    }
+    static int ispalan(int a)
+    {
+        int q,r,s=0;
+        q=a;
+        while(q!=0)
+        {
+            r=q%10;
+            s=s*10+r;
+            q=q/10;
+        }
+        return s;
     }
     public static void main(String args[])
     {
-        int n,rev=0,r;
+        int n;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
-        boolean a=isprime(n);
-        while(n>0)
+        if(isprime(n) && n>1)
         {
-          r=n%10;
-          rev=rev*10+r;
-          n=n/10;
-        }
-        boolean b=isprime(rev);
-        if(a && !b)
-        {
-            System.out.print("prime but not a circular prime");
-        }
-        else if(a && b)
-        {
-            System.out.print("circular prime");
+            if(isprime(ispalan(n)))
+            {
+                System.out.print("circular prime");
+            }
+            else
+            {
+                System.out.print("prime but not a circular prime");
+            }
         }
         else
         {
