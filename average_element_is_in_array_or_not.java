@@ -1,30 +1,26 @@
 import java.util.*;
-class Present
+class Array
 {
     public static void main(String args[])
     {
-        int n,sum=0,avg;
         Scanner sc=new Scanner(System.in);
+        int n,i,s=0,avg,c=0;
         n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+        int [] a=new int[n];
+        for(i=0;i<n;i++)
         {
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
+            s=s+a[i];
         }
-        for(int i=0;i<n;i++)
+        avg=s/n;
+        for(i=0;i<n;i++)
         {
-            sum=sum+arr[i];
-        }
-        avg=sum/n;
-        int c=0;
-        for(int i=0;i<n;i++)
-        {
-            if(avg==arr[i])
+            if(a[i]==avg)
             {
-                c+=1;
+                c=c+1;
             }
         }
-        if(c>=1)
+        if(c>0)
         {
             System.out.print("True");
         }
@@ -32,5 +28,7 @@ class Present
         {
             System.out.print("False");
         }
+        
+        
     }
 }
