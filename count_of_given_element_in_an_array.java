@@ -1,23 +1,22 @@
 import java.util.*;
-class Count
+class Last
 {
     public static void main(String args[])
     {
-        int n,a;
         Scanner sc=new Scanner(System.in);
+        int n,i,b,c=0;
         n=sc.nextInt();
-        int[] arr =new int[n];
-        for(int i=0;i<n;i++)
+        int [] a=new int[n];
+        for(i=0;i<n;i++)
         {
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
         }
-        a=sc.nextInt();
-        int c=0;
-        for(int i=0;i<n;i++)
+        b=sc.nextInt();
+        for(i=0;i<n;i++)
         {
-            if(arr[i]==a)
+            if(a[i]==b)
             {
-                c+=1;
+                c=c+1;
             }
         }
         System.out.print(c);
