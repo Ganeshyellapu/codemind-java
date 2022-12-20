@@ -1,14 +1,14 @@
 import java.util.*;
-class patterns
+class pattern
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         int rows=sc.nextInt();
-        for(int i=rows;i>=1;i--)
+        for(int i=1;i<=rows;i++)
         {
             char c=(char)(i+64);
-            for(int j=1;j<=i;j++)
+            for(int j=1;j<=rows;j++)
             {
                 System.out.print(c+" ");
             }
